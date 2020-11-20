@@ -1,5 +1,7 @@
 FROM php:7.4-cli
 
+LABEL org.opencontainers.image.source https://github.com/shoma/docker-php-dev
+
 # https://getcomposer.org/doc/03-cli.md#environment-variables
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
