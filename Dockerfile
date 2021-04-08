@@ -6,7 +6,7 @@ LABEL org.opencontainers.image.source https://github.com/shoma/docker-php-dev
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
 ENV COMPOSER_NO_INTERACTION 1
-ENV COMPOSER_VERSION 2.0.7
+ENV COMPOSER_VERSION 2.0.12
 
 RUN mkdir /composer
 WORKDIR /composer
