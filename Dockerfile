@@ -23,9 +23,15 @@ RUN apt-get update && apt-get install -y ${PHPIZE_DEPS} git unzip \
         && apt-get clean
 
 # utilities
-RUN apt-get install -y vim-tiny
+RUN apt-get install -y vim-tiny \
+        && apt-get install -y locales \
+        && echo 'en_US.UTF-8 UTF-8' >>  /etc/locale.gen \
+        && locale-gen  \
+        && update-locale \
+        && apt-get clean
 
 ENV PATH "${PATH}:/composer/vendor/bin"
+ENV LANG en_US.UTF-8
 
 # show infomation and verify
 RUN php -v \
